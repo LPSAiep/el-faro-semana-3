@@ -1,0 +1,135 @@
+/* =========================
+   BASE GENERAL DEL SITIO
+   ========================= */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f5f5f5; /* Fondo gris solicitado */
+  margin: 0;
+  line-height: 1.6;
+}
+
+header, nav, main, section, article, footer {
+  display: block;
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px;
+}
+
+/* =========================
+   HEADER (Flexbox)
+   ========================= */
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ccc;
+}
+
+.cabecera {
+  display: flex;              /* Layout Flexbox */
+  flex-direction: column;     /* Elementos en columna */
+  align-items: center;        /* Centrado horizontal */
+  text-align: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 90px;
+  height: auto;
+}
+
+/* =========================
+   NAVEGACIÓN (Flexbox)
+   ========================= */
+nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ccc;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;              /* Flexbox en menú */
+  justify-content: center;
+  gap: 16px;
+}
+
+nav a {
+  color: #000;
+  text-decoration: underline; /* Subrayado por defecto */
+}
+
+nav a:hover {
+  font-weight: bold;          /* Negrita en hover */
+  text-decoration: none;      /* Sin subrayado en hover */
+}
+
+/* =========================
+   SECCIONES
+   ========================= */
+section {
+  margin-top: 30px;
+}
+
+/* =========================
+   GRID DE ARTÍCULOS (CSS Grid)
+   ========================= */
+.articulos {
+  display: grid;                                /* Layout Grid */
+  grid-template-columns: repeat(3, 1fr);        /* 3 columnas escritorio */
+  gap: 20px;
+}
+
+article {
+  background-color: #ffffff; /* Fondo blanco en artículos */
+  padding: 16px;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover solicitado en artículos */
+article:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* =========================
+   MULTIMEDIA
+   ========================= */
+video, audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* =========================
+   FLOAT (uso puntual)
+   ========================= */
+.img-float {
+  float: left;
+  width: 120px;
+  margin-right: 12px;
+  margin-bottom: 8px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+  background-color: #c9d2d0; /* Color solicitado */
+  color: #31231e;            /* Color solicitado */
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  clear: both;               /* Limpia floats */
+}
+
+/* =========================
+   RESPONSIVIDAD (Media Queries)
+   ========================= */
+@media screen and (max-width: 768px) {
+  .articulos {
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+}
